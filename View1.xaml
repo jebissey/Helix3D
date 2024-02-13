@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="WpfAppHelix3D.View1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfAppHelix3D">
+
+    <UserControl.DataContext>
+        <local:ViewModel1 />
+    </UserControl.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="View1"/>
+
+        <local:SharedView Grid.Row="1"/>
+        <local:HelixView  Grid.Row="2"/>
+    </Grid>
+
+</UserControl>

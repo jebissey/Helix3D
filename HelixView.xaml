@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="WpfAppHelix3D.HelixView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:h="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf"
+             xmlns:local="clr-namespace:WpfAppHelix3D">
+
+    <UserControl.DataContext>
+        <local:HelixViewModel />
+    </UserControl.DataContext>
+
+    <h:HelixViewport3D ItemsSource="{Binding Objects}" />
+</UserControl>
