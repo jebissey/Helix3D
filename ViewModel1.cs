@@ -1,6 +1,7 @@
 ﻿
 namespace WpfAppHelix3D;
 
-class ViewModel1
+internal class ViewModel1
 {
+    public string Title => "View1";
 }

@@ -14,7 +14,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="View1"/>
+        <Label Grid.Row="0" Content="{Binding Title}"/>
 
         <local:SharedView Grid.Row="1"/>
         <local:HelixView  Grid.Row="2"/>
