@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Messaging;
 using HelixToolkit.Wpf;
+using OxyPlot;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
 
@@ -29,6 +30,10 @@ internal class MainWindowViewModel : ObservableObject
 
             if (selectedIndex == 0) _ = WeakReferenceMessenger.Default.Send(new List<string>() { $"Tab1 line{counter + 1}", $"Tab1 line{counter + 2}" });
             else if (selectedIndex == 1) _ = WeakReferenceMessenger.Default.Send(new List<string>() { "Tab2 line1", "Tab2 line2" });
+            else throw new ApplicationException();
+
+            if (selectedIndex == 0) _ = WeakReferenceMessenger.Default.Send(new List<DataPoint>() { new(counter, counter), new(counter+1, counter+1) });
+            else if (selectedIndex == 1) _ = WeakReferenceMessenger.Default.Send(new List<DataPoint>() { new(counter + 1, counter + 2), new(counter + 3, counter + 4), new(counter + 4, counter + 5) });
             else throw new ApplicationException();
 
             counter++;

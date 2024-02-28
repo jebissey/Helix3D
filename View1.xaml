@@ -12,12 +12,14 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Content="{Binding Title}"/>
 
-        <local:SharedView Grid.Row="1"/>
-        <local:HelixView  Grid.Row="2"/>
+        <local:SharedView   Grid.Row="1"/>
+        <local:HelixView    Grid.Row="2"/>
+        <local:OxyPlotView  Grid.Row="3"/>
     </Grid>
 
 </UserControl>
